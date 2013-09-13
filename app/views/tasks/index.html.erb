@@ -15,6 +15,11 @@
       <span><%= user.name %></span>
     <% end %>
   </p>
+  <% if task.belongs_to_specific_project? %>
+    <p>Project: <% task.project.name %></p>
+  <% else %>
+    <p>Project: None</p>
+  <% end %>
   <p>
   <% if !task.completed %>
   <%= link_to "DONE!", has_been_completed_task_path(task), method: 'post' %>

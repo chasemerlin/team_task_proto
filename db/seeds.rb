@@ -11,3 +11,5 @@ james = User.create(name: "James", email: "jamescrater@gmail.com", password: "aa
 
 lean = Skill.create(name: "Leans")
 
+project = Project.create(name: "General")
+

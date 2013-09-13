@@ -1,3 +1,25 @@
+<h3><%= current_user %> logged in</h3>
 <% @tasks.each do |task| %>
-  <p>task.description</p>
+  <p>Description: <%= task.description %> </p>
+  <p>Weight: <%= task.weight %> </p>
+  <p>Due Date: <%= task.due_date %> </p>
+  <p>
+    Skills:
+    <% task.skills.each do |skill| %>
+    <span><%= skill.name %>
+    <% end %>
+  </p>
+  <p>
+    Users: 
+    <% task.users.each do |user| %>
+      <span><%= user.name %></span>
+    <% end %>
+  </p>
+  <p>
+  <% if !task.completed %>
+  <%= link_to "DONE!", has_been_completed_task_path(task), method: 'post' %>
+  <% end %>
+  </p>
+  <br>
 <% end %>
+<%= link_to "New Task", new_task_path %>

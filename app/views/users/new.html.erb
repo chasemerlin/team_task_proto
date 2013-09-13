@@ -1,0 +1,6 @@
+<%= form_for @user do |f| %>
+  <%= f.email_field :email, label: "Email Address" %>
+  <%= f.password_field :password %>
+  <%= f.text_field :name, label: "Full Name" %>
+  <%= f.submit %>
+<% end %>

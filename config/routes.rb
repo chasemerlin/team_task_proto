@@ -1,6 +1,19 @@
 TeamTaskProto::Application.routes.draw do
-  
-  resources :tasks
+  root to: 'tasks#index'
+
+  resources :tasks, only: [:index, :new, :create] do
+    member do
+      post 'has_been_completed'
+    end
+  end
+
+  resources :users, only: [:new, :create, :show, :edit, :update]
+
+  resources :skills, only: [:new, :create]
+
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  get 'logout', to: 'sessions#destroy'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

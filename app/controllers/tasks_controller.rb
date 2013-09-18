@@ -22,6 +22,12 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+  end
+
   def has_been_completed
     @task = Task.find(params[:id])
     @obligation = Obligation.where(user_id: current_user.id, task_id: @task.id).first

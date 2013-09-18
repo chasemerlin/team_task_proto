@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <h2>Tasks Completed Today</h2>
+    <% @users.each do |user| %>
+      <h5><%= user.name %></h5>
+      <% user.daily_completed_tasks.each do |task| %>
+        <p><%= task.description %></p>
+      <% end %>
+    <% end %>
+  </body>
+</html>

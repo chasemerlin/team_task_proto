@@ -1,6 +1,6 @@
-<%= form_for @user do |f| %>
-  <%= f.email_field :email, label: "Email Address" %>
-  <%= f.password_field :password %>
-  <%= f.text_field :name, label: "Full Name" %>
+<%= semantic_form_for @user do |f| %>
+  <%= f.input :email, label: "Email Address" %>
+  <%= f.input :password %>
+  <%= f.input :name, label: "Full Name" %>
   <%= f.submit %>
 <% end %>

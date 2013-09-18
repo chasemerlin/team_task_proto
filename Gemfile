@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 2.3.2.1'
 gem 'jquery-rails'
 gem 'formtastic'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'fabrication'
 gem 'faker'
+gem 'whenever'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController 
   def new
-    redirect_to home_path if current_user
+    redirect_to root_path if current_user
   end
 
   def create 
@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       redirect_to root_path, notice: 'You are signed in'
     else
       flash[:error] = "Invalid email or password"
-      redirect_to sign_in_path
+      redirect_to login_path
     end
   end
 

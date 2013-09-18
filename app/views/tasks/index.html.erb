@@ -28,7 +28,7 @@
       <% if Obligation.where(user_id: current_user.id, task_id: task.id).first.date_completed.nil? %>
         <%= link_to "DONE!", has_been_completed_task_path(task), method: 'post' %>
       <% else %>
-      
+        <%= "Completed on: #{Obligation.where(user_id: current_user.id, task_id: task.id).first.date_completed}" %>
       <% end %>
     <% end %>
   </p>

@@ -1,4 +1,6 @@
 class TasksController < ApplicationController 
+  before_filter :require_user
+
   def index
     @tasks = Task.all
     @obligations = Obligation.where(user_id: current_user.id) 
@@ -26,4 +28,5 @@ class TasksController < ApplicationController
     @obligation.update_attributes(date_completed: Date.today)
     redirect_to root_path
   end
+
 end

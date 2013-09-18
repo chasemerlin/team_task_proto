@@ -13,3 +13,5 @@ lean = Skill.create(name: "Leans")
 
 project = Project.create(name: "General")
 
+obligation = Obligation
+

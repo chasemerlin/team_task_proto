@@ -13,6 +13,6 @@ class ApplicationController < ActionController::Base
     User.all.select {|user| user.id != current_user.id}
   end
 
-  helper_method :current_user, :team_users
+  helper_method :current_user, :team_users, :require_user
 
 end

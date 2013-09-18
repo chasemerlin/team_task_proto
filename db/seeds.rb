@@ -8,10 +8,11 @@
 
 chase = User.create(name: "Chase", email: "chasemerlin@gmail.com", password: "aa")
 james = User.create(name: "James", email: "jamescrater@gmail.com", password: "aa")
+chris = User.create(name: "Chris", email: "camcelve@gmail.com", password: "aa")
 
-lean = Skill.create(name: "Leans")
 
-project = Project.create(name: "General")
+lean_startup_skill = Skill.create(name: "Lean Startup")
 
-obligation = Obligation
+project = Project.create(name: "Team Task Manager")
+
 

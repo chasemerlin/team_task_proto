@@ -14,7 +14,7 @@ class TasksController < ApplicationController
     @task = Task.new(params[:task])
     if @task.save
       @task.users.each do |user|
-        Obligation.create(user_id: user.id, task_id: @task.id)
+        Obligation.create(user_id: user.id, task_id: @task.id, date_completed: nil)
       end
       redirect_to root_path
     else
